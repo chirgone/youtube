@@ -1,0 +1,89 @@
+name: 🤖 Generate Scripts Batch
+
+on:
+  schedule:
+    # Run every day at 3 AM UTC (M2: genera scripts)
+    - cron: '0 3 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: 'Number of scripts to generate'
+        required: false
+        default: '10'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'scripts/generator/package.json'
+
+      - name: 📦 Install dependencies
+        run: |
+          cd scripts/generator
+          npm install
+        env:
+          CI: true
+
+      - name: 🎬 Generate scripts batch
+        run: |
+          cd scripts/generator
+          npm run generate:batch
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          BATCH_SIZE: ${{ github.event.inputs.batch_size || '10' }}
+          MODEL: llama-3.3-70b-versatile
+          MAX_TOKENS: 1000
+          OUTPUT_DIR: ./generated
+          CURRICULUM_PATH: ../../curriculum/2026-q1.json
+
+      - name: 📊 Check generated scripts
+        run: |
+          ls -la scripts/generated/ | head -20
+          cat scripts/generated/index.json
+
+      - name: 🔐 Configure Git
+        run: |
+          git config --local user.email "bot@jovi-academy.dev"
+          git config --local user.name "JOVI Bot"
+
+      - name: 📝 Commit & push generated scripts
+        run: |
+          cd /home/runner/work/youtube/youtube
+          git add scripts/generated/
+          git diff --cached --stat
+          
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "✅ No new scripts to commit"
+          else
+            git commit -m "🤖 Auto-generated scripts batch - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            git push origin main
+            echo "✅ Scripts pushed to GitHub"
+          fi
+
+      - name: 📧 Notify on success
+        if: success()
+        run: |
+          echo "✅ Script generation completed successfully"
+          echo "📊 Summary:"
+          cat scripts/generated/index.json | jq '.success, .total'
+
+      - name: 🚨 Notify on failure
+        if: failure()
+        run: |
+          echo "❌ Script generation failed"
+          echo "📋 Check logs above for details"

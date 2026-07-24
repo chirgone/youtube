@@ -1,0 +1,709 @@
+{
+  "quarter": "Q4",
+  "year": 2026,
+  "theme": "Advanced Security, DevSecOps & Tendencias 2026",
+  "description": "Semanas 37-52: Incident response, red teaming, threat intel, observability, carreras",
+  "episodes": [
+    {
+      "week": 37,
+      "theme": "Incident Response: Cuando TODO falla",
+      "episodes": [
+        {
+          "episode": 85,
+          "title": "Fases de un incident: Preparación → Detección → Contención → Recovery",
+          "keywords": ["incident response", "phases", "preparation", "detection"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "4 fases: antes del incident (prepare), durante (detect→contain), después (recover)",
+          "cta": "Prepara playbooks ANTES de breach - no durante",
+          "tags": ["incident-response", "security", "process"],
+          "resources": [
+            "https://owasp.org/www-community/Incident_Response_Plan"
+          ],
+          "viral_angle": "La mayoría de empresas NO está preparada para incident"
+        },
+        {
+          "episode": 86,
+          "title": "Runbooks: Playbooks ejecutables para ataques comunes",
+          "keywords": ["runbooks", "playbooks", "procedure", "automation"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Paso a paso: si detectas X → ejecuta Y → comunica Z",
+          "cta": "10-20 playbooks cubre 80% de incidents comunes",
+          "tags": ["runbooks", "procedures", "automation"],
+          "resources": [
+            "https://www.cloudflare.com/learning/security/incident-response/"
+          ],
+          "viral_angle": "Procedimiento documentado = 10x más rápido"
+        },
+        {
+          "episode": 87,
+          "title": "Forensics: Cómo investigar un breach sin destruir evidencia",
+          "keywords": ["forensics", "investigation", "evidence", "chain of custody"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Preservar logs, snapshots, memoria - seguir cadena de custodia",
+          "cta": "Toca evidencia mal = no es admisible legalmente",
+          "tags": ["forensics", "investigation", "evidence"],
+          "resources": [
+            "https://www.cloudflare.com/learning/security/gloss-terms/incident-response/"
+          ],
+          "viral_angle": "Forensics mal = culpable sale libre en juzgado"
+        },
+        {
+          "episode": 88,
+          "title": "Post-mortem: Cómo convertir desastres en aprendizaje",
+          "keywords": ["postmortem", "lessons learned", "blameless", "improvement"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "'Blameless' postmortem: ¿qué salió mal?, ¿por qué?, ¿cómo mejoramos?",
+          "cta": "Postmortem sin culpa = equipos mejoran sin miedo",
+          "tags": ["postmortem", "learning", "improvement"],
+          "resources": [
+            "https://landing.google.com/sre/sre-book/chapters/postmortem-culture/"
+          ],
+          "viral_angle": "La empresa que aprende más rápido de errores = gana"
+        }
+      ]
+    },
+    {
+      "week": 38,
+      "theme": "Red Teaming: Atacar tu propia empresa",
+      "episodes": [
+        {
+          "episode": 89,
+          "title": "Penetration Testing: Lo que hacen hackers éticos",
+          "keywords": ["pentest", "penetration", "ethical hacking", "assessment"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Scoping → recon → scanning → exploitation → reporting",
+          "cta": "Pentesting anual = parte de ciberseguridad moderna",
+          "tags": ["pentest", "red-team", "assessment"],
+          "resources": [
+            "https://owasp.org/www-project-web-security-testing-guide/"
+          ],
+          "viral_angle": "Paga hackers éticos ANTES de que malos lo hagan gratis"
+        },
+        {
+          "episode": 90,
+          "title": "Social Engineering: Test de ingeniería social (phishing, pretexting)",
+          "keywords": ["social engineering", "phishing", "human engineering", "test"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Phishing test, call pretexting, tailgating - vulnerabilidades humanas",
+          "cta": "El 90% de breaches empiezan con social engineering",
+          "tags": ["social-engineering", "phishing", "human"],
+          "resources": [
+            "https://owasp.org/www-community/attacks/Social_Engineering"
+          ],
+          "viral_angle": "El eslabón débil es el humano, no la tecnología"
+        },
+        {
+          "episode": 91,
+          "title": "Bug Bounty: Ganar dinero encontrando vulnerabilidades",
+          "keywords": ["bug bounty", "vulnerability disclosure", "income"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Plataformas (HackerOne, Bugcrowd), escalas de pago, responsabilidad",
+          "cta": "Algunos hackers ganan $100k/año en bug bounties",
+          "tags": ["bug-bounty", "income", "hacking"],
+          "resources": [
+            "https://www.hackerone.com/"
+          ],
+          "viral_angle": "Encuentra bugs = gana dinero legalmente"
+        },
+        {
+          "episode": 92,
+          "title": "Diferencia: Pentesting vs Red Team vs Purple Team",
+          "keywords": ["pentest", "red team", "purple team", "comparison"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Pentest = punto en tiempo. Red team = contino. Purple = red+blue juntos",
+          "cta": "Red team = simulación realista continua (mejor que pentest puntual)",
+          "tags": ["red-team", "comparison", "security"],
+          "resources": [
+            "https://www.cloudflare.com/learning/security/red-team/"
+          ],
+          "viral_angle": "Red team > pentest > nada"
+        }
+      ]
+    },
+    {
+      "week": 39,
+      "theme": "Threat Intelligence",
+      "episodes": [
+        {
+          "episode": 93,
+          "title": "IOCs (Indicators of Compromise): Señales de que estás siendo atacado",
+          "keywords": ["ioc", "indicators", "compromise", "detection"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "IP maliciosa, dominio, hash de archivo - busca estas señales",
+          "cta": "Revisa IOCs en plataformas: AbuseIPDB, Shodan, Virustotal",
+          "tags": ["ioc", "detection", "threat-intel"],
+          "resources": [
+            "https://www.virustotal.com/"
+          ],
+          "viral_angle": "Detectar attacks por IOCs = prevención temprana"
+        },
+        {
+          "episode": 94,
+          "title": "MITRE ATT&CK Framework: La taxonomía de técnicas de hackers",
+          "keywords": ["attack framework", "techniques", "taxonomy", "mitre"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "14 tácticas × 600+ técnicas = cómo atacan adversarios",
+          "cta": "Mapea tu defensa contra ATT&CK - cierra brechas",
+          "tags": ["mitre-attack", "tactics", "techniques"],
+          "resources": [
+            "https://attack.mitre.org/"
+          ],
+          "viral_angle": "La mayoría de ataques usan técnicas conocidas"
+        },
+        {
+          "episode": 95,
+          "title": "Threat Feeds: Dónde obtener información de ataques actuales",
+          "keywords": ["threat feeds", "intelligence", "feeds", "sources"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Threat Intelligence"],
+          "script_focus": "Gratuitas: AbuseIPDB, OSINT, Cloudflare. Premium: Shodan, Recorded Future",
+          "cta": "Integra feeds en SIEM - alertas automáticas",
+          "tags": ["threat-feeds", "intelligence", "sources"],
+          "resources": [
+            "https://www.cloudflare.com/threat-intelligence/"
+          ],
+          "viral_angle": "Threat intel públic = ventaja competitiva"
+        },
+        {
+          "episode": 96,
+          "title": "OSINT (Open Source Intelligence): Todo está público, solo busca",
+          "keywords": ["osint", "reconnaissance", "public", "gathering"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Google dorking, Shodan, WHOIS - información pública de blancos",
+          "cta": "Hackers sacan tu arquitectura de fuentes públicas",
+          "tags": ["osint", "reconnaissance", "gathering"],
+          "resources": [
+            "https://osintframework.com/"
+          ],
+          "viral_angle": "Google sabe más de ti que crees"
+        }
+      ]
+    },
+    {
+      "week": 40,
+      "theme": "Infrastructure as Code Security",
+      "episodes": [
+        {
+          "episode": 97,
+          "title": "Terraform Security: Errores comunes en IaC",
+          "keywords": ["terraform", "iac", "security", "misconfiguration"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Terraform"],
+          "script_focus": "Secrets en código, permisos abiertos, state files sin encripción",
+          "cta": "Usa terraform cloud + remote state + variable encryption",
+          "tags": ["terraform", "iac", "security"],
+          "resources": [
+            "https://developers.cloudflare.com/terraform/"
+          ],
+          "viral_angle": "IaC con vulnerabilidades = infraestructura insegura automática"
+        },
+        {
+          "episode": 98,
+          "title": "Container Security: Docker vs Podman vs WebAssembly",
+          "keywords": ["containers", "docker", "podman", "wasm", "security"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Docker = estándar, Podman = sin daemon, WASM = future",
+          "cta": "WASM = aislamiento perfecto sin overhead",
+          "tags": ["containers", "docker", "security"],
+          "resources": [
+            "https://docs.docker.com/engine/security/"
+          ],
+          "viral_angle": "WASM es el futuro de sandboxing"
+        },
+        {
+          "episode": 99,
+          "title": "Kubernetes Security: Orquestación + protección",
+          "keywords": ["kubernetes", "k8s", "security", "orchestration"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers"],
+          "script_focus": "RBAC, network policies, pod security, secrets rotation",
+          "cta": "K8s por defecto = inseguro. Seguir CIS Benchmark",
+          "tags": ["kubernetes", "security", "orchestration"],
+          "resources": [
+            "https://www.cisecurity.org/cis-benchmarks/"
+          ],
+          "viral_angle": "K8s = complejidad de seguridad exponencial"
+        },
+        {
+          "episode": 100,
+          "title": "Supply Chain Security: Verificar dependencias (npm, pip, cargo)",
+          "keywords": ["supply chain", "dependencies", "vulnerability", "verification"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "npm audit, pip-audit, cargo-audit - busca vulnerabilidades en dependencias",
+          "cta": "Actualiza dependencias cada semana - no esperes emergencias",
+          "tags": ["supply-chain", "dependencies", "security"],
+          "resources": [
+            "https://docs.npmjs.com/cli/v8/commands/npm-audit"
+          ],
+          "viral_angle": "Una dependencia mala = todo comprometido"
+        }
+      ]
+    },
+    {
+      "week": 41,
+      "theme": "Observability: Logs, Metrics, Traces",
+      "episodes": [
+        {
+          "episode": 101,
+          "title": "¿Por qué logs sin estructura son inútiles?",
+          "keywords": ["logs", "structured logging", "json", "observability"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Logpush"],
+          "script_focus": "Logs de texto = imposible buscar. JSON = queryable, parseable",
+          "cta": "Logging estructurado = requisito para seguridad moderna",
+          "tags": ["logging", "structured", "observability"],
+          "resources": [
+            "https://developers.cloudflare.com/logs/"
+          ],
+          "viral_angle": "Logs sin estructura = tiempo perdido buscando"
+        },
+        {
+          "episode": 102,
+          "title": "OpenTelemetry: El estándar de observabilidad (logs + metrics + traces)",
+          "keywords": ["opentelemetry", "otel", "observability", "standard"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "OTEL = colectar logs/metrics/traces con estándar único",
+          "cta": "Implementa OTEL desde day 1 - vendor agnostic",
+          "tags": ["opentelemetry", "observability", "standard"],
+          "resources": [
+            "https://opentelemetry.io/"
+          ],
+          "viral_angle": "Observabilidad = propiedad emergente, no agregado"
+        },
+        {
+          "episode": 103,
+          "title": "Alerting: No te despiertes a las 3 AM por falso positivo",
+          "keywords": ["alerting", "monitoring", "threshold", "on-call"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Logpush"],
+          "script_focus": "Alertas inteligentes: umbrales dinámicos, correlación, contexto",
+          "cta": "Mejor pocas alertas relevantes que 100 alertas irrelevantes",
+          "tags": ["alerting", "monitoring", "on-call"],
+          "resources": [
+            "https://sre.google/books/"
+          ],
+          "viral_angle": "Alert fatigue = on-call burnout"
+        },
+        {
+          "episode": 104,
+          "title": "Cloudflare Logpush + Analytics: Monitoreo global integrado",
+          "keywords": ["logpush", "analytics", "monitoring", "cloudflare"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Logpush", "Analytics"],
+          "script_focus": "Envía logs a S3/BigQuery automáticamente - análisis completo",
+          "cta": "Logpush gratis: acceso a 89 tipos de logs",
+          "tags": ["logpush", "analytics", "cloudflare"],
+          "resources": [
+            "https://developers.cloudflare.com/logs/logpush/"
+          ],
+          "viral_angle": "Observabilidad global sin montar infraestructura"
+        }
+      ]
+    },
+    {
+      "week": 42,
+      "theme": "Tendencias emergentes",
+      "episodes": [
+        {
+          "episode": 105,
+          "title": "Quantum Computing & Post-Quantum Cryptography",
+          "keywords": ["quantum", "post-quantum", "cryptography", "future"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Quantum rompe RSA. Post-quantum algorithms preparan el futuro",
+          "cta": "Comenzá migraciones de crypto ahora (lento proceso)",
+          "tags": ["quantum", "cryptography", "future"],
+          "resources": [
+            "https://csrc.nist.gov/projects/post-quantum-cryptography/"
+          ],
+          "viral_angle": "En 10-15 años, la mayoría de crypt se rompe"
+        },
+        {
+          "episode": 106,
+          "title": "Blockchain & Smart Contract Security",
+          "keywords": ["blockchain", "smart contracts", "security", "defi"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Code = law. Bugs en smart contracts = dinero real perdido",
+          "cta": "Auditoría de smart contracts = caro pero necesario",
+          "tags": ["blockchain", "defi", "security"],
+          "resources": [
+            "https://consensys.github.io/smart-contract-best-practices/"
+          ],
+          "viral_angle": "Un bug de $ 1 cuesta millones en blockchain"
+        },
+        {
+          "episode": 107,
+          "title": "Edge Computing: El futuro después de Cloud (serverless everywhere)",
+          "keywords": ["edge", "cloudflare workers", "serverless", "distributed"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers"],
+          "script_focus": "Edge = correr código donde están los usuarios (30ms latencia global)",
+          "cta": "Cloudflare Workers = edge computing producción",
+          "tags": ["edge", "serverless", "cloudflare"],
+          "resources": [
+            "https://developers.cloudflare.com/workers/"
+          ],
+          "viral_angle": "Cloud centralizado está muriendo"
+        },
+        {
+          "episode": 108,
+          "title": "2026 Predictions: Qué será viral en ciberseguridad & IA",
+          "keywords": ["predictions", "trends", "future", "speculation"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Análisis de tendencias actuales, speculate sobre 2026-2027",
+          "cta": "Si aciertan predicciones → subscribe para más análisis",
+          "tags": ["predictions", "trends", "future"],
+          "resources": [
+            "https://www.cloudflare.com/learning/"
+          ],
+          "viral_angle": "El futuro será diferente a lo que imaginas"
+        }
+      ]
+    },
+    {
+      "week": 43,
+      "theme": "Career & Skills",
+      "episodes": [
+        {
+          "episode": 109,
+          "title": "Certificaciones que valen dinero: CISSP, CEH, OSCP",
+          "keywords": ["certifications", "career", "training", "credentials"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "CISSP ($50k+ premium), CEH (intermediate), OSCP (respeto técnico)",
+          "cta": "Cada cert = aumento de sueldo measurable",
+          "tags": ["certifications", "career", "credentials"],
+          "resources": [
+            "https://www.isc2.org/cissp"
+          ],
+          "viral_angle": "Cert = ticket para mejor sueldo"
+        },
+        {
+          "episode": 110,
+          "title": "Carreras en ciberseguridad: De SOC analyst a CISO (salary guide)",
+          "keywords": ["careers", "salary", "growth", "roles"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Trayectoria: SOC analyst ($50k) → Pentester ($80k) → CISO ($250k+)",
+          "cta": "Elige camino técnico o gerencial según personalidad",
+          "tags": ["careers", "salary", "growth"],
+          "resources": [
+            "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm"
+          ],
+          "viral_angle": "Ciberseguridad = mejor pagado que desarrollo"
+        },
+        {
+          "episode": 111,
+          "title": "IA Engineer: El rol que paga 300k USD/año en 2026",
+          "keywords": ["ai engineer", "ml engineer", "salary", "skills"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "AI engineers escasos. Demanda > oferta = sueldos locos",
+          "cta": "Aprende IA = invertir en tu futuro laboral",
+          "tags": ["ai", "salary", "skills"],
+          "resources": [
+            "https://www.levels.fyi/"
+          ],
+          "viral_angle": "La carrera mejor pagada en tech en 2026"
+        },
+        {
+          "episode": 112,
+          "title": "Cómo entrar a Cloudflare (y empresas tech top)",
+          "keywords": ["hiring", "interview", "recruitment", "tech"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": [],
+          "script_focus": "Process: resume → screening → technical → team fit → offer",
+          "cta": "Prepara portfolio, GitHub projects, escritura técnica",
+          "tags": ["hiring", "interview", "career"],
+          "resources": [
+            "https://www.cloudflare.com/en-gb/careers/"
+          ],
+          "viral_angle": "Tech companies contratan por portfolio, no títulos"
+        }
+      ]
+    },
+    {
+      "week": 44,
+      "theme": "Especialización avanzada",
+      "episodes": [
+        {
+          "episode": 113,
+          "title": "Cloud Security: Misconfigurations en AWS, GCP, Azure",
+          "keywords": ["cloud", "aws", "gcp", "azure", "security"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "S3 buckets públicos, RDS expuesto, secrets en logs - cases reales",
+          "cta": "Audita cloud con tools: CloudMapper, Prowler, Dome9",
+          "tags": ["cloud-security", "aws", "gcp"],
+          "resources": [
+            "https://cloudmapper.readthedocs.io/"
+          ],
+          "viral_angle": "Cloud inseguro = dinero perdido a escala"
+        },
+        {
+          "episode": 114,
+          "title": "IoT Security: Proteger millones de dispositivos",
+          "keywords": ["iot", "embedded", "iot security", "connectivity"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Update mechanisms, credential management, network segmentation en IoT",
+          "cta": "IoT = próxima onda de breaches",
+          "tags": ["iot", "embedded", "security"],
+          "resources": [
+            "https://owasp.org/www-project-iot-top-10/"
+          ],
+          "viral_angle": "Cada dispositivo IoT es otra ventana para atacar"
+        },
+        {
+          "episode": 115,
+          "title": "Network Security: VPN, DDoS, Firewalls moderno",
+          "keywords": ["network", "vpn", "ddos", "firewall", "security"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["DDoS Protection"],
+          "script_focus": "Zero Trust network, microsegmentation, CASB, SWG",
+          "cta": "Red moderna = software-defined, no hardware",
+          "tags": ["network", "security", "modern"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/"
+          ],
+          "viral_angle": "Firewalls de hardware = obsoletos"
+        },
+        {
+          "episode": 116,
+          "title": "Mobile App Security: Proteger iOS & Android",
+          "keywords": ["mobile", "ios", "android", "app security", "mobile security"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "OWASP Mobile Top 10, reverse engineering, code obfuscation",
+          "cta": "Mobile = 90% de internet pero pocos aseguran apps",
+          "tags": ["mobile", "app-security", "ios"],
+          "resources": [
+            "https://owasp.org/www-project-mobile-top-10/"
+          ],
+          "viral_angle": "App móvil = computadora en bolsillo = ataque grande"
+        }
+      ]
+    },
+    {
+      "week": 45,
+      "theme": "Especiales y bonus",
+      "episodes": [
+        {
+          "episode": 117,
+          "title": "Case Study: Análisis de breaches reales y qué falló",
+          "keywords": ["case study", "breach", "analysis", "lessons learned"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Breaches públicos: timeline, técnicas usadas, culpa, lecciones",
+          "cta": "Aprende de errores ajenos - cuesta menos",
+          "tags": ["case-study", "breach", "analysis"],
+          "resources": [
+            "https://haveibeenpwned.com/"
+          ],
+          "viral_angle": "Historia real > teoría"
+        },
+        {
+          "episode": 118,
+          "title": "Bug Bounty Success: Cómo reportar vulnerabilidades profesionalmente",
+          "keywords": ["bug bounty", "disclosure", "report", "communication"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Reporte claro, PoC reproducible, disclosure timeline responsable",
+          "cta": "Reporte profesional = pago mayor",
+          "tags": ["bug-bounty", "disclosure", "communication"],
+          "resources": [
+            "https://www.hackerone.com/researchers"
+          ],
+          "viral_angle": "Cómo reportar vulnerabilidad = cómo ganas respeto y dinero"
+        },
+        {
+          "episode": 119,
+          "title": "Ética en ciberseguridad: Línea entre legal e ilegal",
+          "keywords": ["ethics", "legal", "hacking", "morality"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Ethical hacking vs delito. Línea fina. Responsabilidad moral",
+          "cta": "Con poder (de hacking) viene responsabilidad",
+          "tags": ["ethics", "legal", "responsibility"],
+          "resources": [
+            "https://www.ec-council.org/certifications/certified-ethical-hacker-ceh/"
+          ],
+          "viral_angle": "No porque PUEDAS hackear = DEBES hackear"
+        },
+        {
+          "episode": 120,
+          "title": "BONUS: Los 10 mejores recursos gratuitos para aprender seguridad",
+          "keywords": ["resources", "learning", "free", "education"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "TryHackMe, HackTheBox, OWASP, Cloudflare Learning, Coursera, etc",
+          "cta": "Educación en seguridad es gratis - sin excusas",
+          "tags": ["resources", "learning", "free"],
+          "resources": [
+            "https://tryhackme.com/",
+            "https://www.cloudflare.com/learning/"
+          ],
+          "viral_angle": "Mejores recursos educación seguridad son gratuitos"
+        }
+      ]
+    },
+    {
+      "week": 46,
+      "theme": "Tendencias finales y wrap-up",
+      "episodes": [
+        {
+          "episode": 121,
+          "title": "Conversacional AI en seguridad: SecGPT, análisis automático",
+          "keywords": ["conversational ai", "security", "gpt", "automation"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers AI"],
+          "script_focus": "IA ayuda a analizar logs, detectar patrones, responder incident",
+          "cta": "IA + ciberseguridad = combo potente",
+          "tags": ["ai", "security", "automation"],
+          "resources": [
+            "https://developers.cloudflare.com/workers-ai/"
+          ],
+          "viral_angle": "IA como SOC analyst automatizado"
+        },
+        {
+          "episode": 122,
+          "title": "Zero Trust 2.0: Evolución de arquitectura de seguridad",
+          "keywords": ["zero trust", "evolution", "architecture", "security"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One"],
+          "script_focus": "De Zero Trust 1.0 (identity) a 2.0 (IA + behavior + context)",
+          "cta": "Siguiente onda = predictive security",
+          "tags": ["zero-trust", "evolution", "security"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/"
+          ],
+          "viral_angle": "Zero Trust es dinámico, evoluciona constantemente"
+        },
+        {
+          "episode": 123,
+          "title": "Consejos finales: Ser mejor profesional en seguridad",
+          "keywords": ["advice", "professional", "growth", "mindset"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Curiosidad, escritura técnica, networking, contribución open source",
+          "cta": "La mejor carrera = aprendizaje continuo",
+          "tags": ["advice", "professional", "growth"],
+          "resources": [
+            "https://github.com/"
+          ],
+          "viral_angle": "Carrera en seguridad = curiosidad + humildad"
+        },
+        {
+          "episode": 124,
+          "title": "2026: Qué esperar y cómo prepararse",
+          "keywords": ["2026", "future", "preparation", "outlook"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Tecnologías emergentes, ataques predichos, carrera outlook",
+          "cta": "Prepárate hoy para sorpresas de mañana",
+          "tags": ["2026", "future", "preparation"],
+          "resources": [
+            "https://www.cloudflare.com/learning/"
+          ],
+          "viral_angle": "El que se prepara hoy gana mañana"
+        }
+      ]
+    }
+  ]
+}

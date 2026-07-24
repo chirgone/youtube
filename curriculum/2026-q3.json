@@ -1,0 +1,568 @@
+{
+  "quarter": "Q3",
+  "year": 2026,
+  "theme": "IA & Automation: Máquinas que toman decisiones",
+  "description": "Semanas 25-36: LLMs, Prompt Engineering, IA Security, Agentes autónomos",
+  "episodes": [
+    {
+      "week": 25,
+      "theme": "LLM Basics: Cómo funcionan ChatGPT y modelos modernos",
+      "episodes": [
+        {
+          "episode": 53,
+          "title": "¿Cómo entienden las máquinas? Redes neuronales en 3 minutos",
+          "keywords": ["neural networks", "redes neuronales", "deep learning", "basico"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Neurona artificial = función matemática. Redes = millones conectadas",
+          "cta": "No necesitas PhD en matemática - solo entiende el concepto",
+          "tags": ["neural-networks", "ai", "educacion"],
+          "resources": [
+            "https://course.elementsofai.com/"
+          ],
+          "viral_angle": "El cerebro artificial es más simple de lo que crees"
+        },
+        {
+          "episode": 54,
+          "title": "Tokens: Cómo ChatGPT divide palabras (y por qué importa)",
+          "keywords": ["tokens", "tokenization", "llm", "context window"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Palabra ≠ token. 'Running' = 1 token, 'café' = múltiples. Impacta costo",
+          "cta": "Usa tokenizer online: entiende cuánto cuestan tus prompts",
+          "tags": ["tokens", "llm", "economia"],
+          "resources": [
+            "https://platform.openai.com/tokenizer"
+          ],
+          "viral_angle": "Mismo prompt cuesta diferente en idiomas distintos"
+        },
+        {
+          "episode": 55,
+          "title": "Temperature & top_p: Creatividad vs determinismo en respuestas",
+          "keywords": ["temperature", "top_p", "sampling", "parámetros"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Temperature=0 (determinístico) vs 1.0 (creativo). Cuándo usar cada uno",
+          "cta": "Ajusta temperature según caso: código=0, creatividad=0.8",
+          "tags": ["parameters", "sampling", "tuning"],
+          "resources": [
+            "https://platform.openai.com/docs/guides/tokens/managing-tokens"
+          ],
+          "viral_angle": "Mismo prompt, diferentes parámetros = respuestas completamente distintas"
+        },
+        {
+          "episode": 56,
+          "title": "Context Window: ¿Por qué ChatGPT olvida conversaciones largas?",
+          "keywords": ["context window", "memory", "tokens", "limitacion"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "GPT-4 recuerda últimos 128k tokens (~100 páginas). Después olvida",
+          "cta": "Para conversaciones largas: resumen automático cada N mensajes",
+          "tags": ["context", "memory", "limitacion"],
+          "resources": [
+            "https://openai.com/blog/gpt-4/"
+          ],
+          "viral_angle": "Tu historial no es infinito - la IA tiene amnesia"
+        }
+      ]
+    },
+    {
+      "week": 26,
+      "theme": "LLM Hallucinations y limitaciones",
+      "episodes": [
+        {
+          "episode": 57,
+          "title": "Hallucinations: ¿Por qué ChatGPT inventa respuestas con confianza?",
+          "keywords": ["hallucinations", "alucinaciones", "falso", "confiabilidad"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "LLM predice siguiente token (probabilidad). Si no sabe, adivina",
+          "cta": "Siempre verifica fuentes - nunca confíes 100% en IA para datos",
+          "tags": ["hallucinations", "ai-safety", "confiabilidad"],
+          "resources": [
+            "https://www.cloudflare.com/learning/ai/"
+          ],
+          "viral_angle": "ChatGPT miente sin saber que miente"
+        },
+        {
+          "episode": 58,
+          "title": "Biases en IA: ¿Por qué ChatGPT falla con español y culturas no-inglesas?",
+          "keywords": ["bias", "sesgo", "equidad", "idiomas", "entrenamiento"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Entrenamiento = 80% contenido inglés. Sesgo inherente vs otras culturas",
+          "cta": "Sé consciente: modelos multilingües siguen con sesgo inglés",
+          "tags": ["bias", "fairness", "ethics"],
+          "resources": [
+            "https://course.elementsofai.com/es/2/3"
+          ],
+          "viral_angle": "IA entrenada por Occidente = sesgo occidental"
+        },
+        {
+          "episode": 59,
+          "title": "Copyright & Training Data: ¿ChatGPT entrenado con tu código robado?",
+          "keywords": ["copyright", "training data", "legal", "intellectual property"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Modelos entrenados con datos públicos de internet (incluye GitHub)",
+          "cta": "GitHub Copilot lawsuits - el debate legal está vivo",
+          "tags": ["copyright", "legal", "ethics"],
+          "resources": [
+            "https://www.theverge.com/2023/11/8/23948386/microsoft-openai-github-copilot-legal-lawsuit"
+          ],
+          "viral_angle": "¿Quién es dueño del código que IA genera?"
+        },
+        {
+          "episode": 60,
+          "title": "Prompt Injection: El nuevo SQL Injection para LLMs",
+          "keywords": ["injection", "security", "vulnerability", "exploit"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Inyectar instrucciones maliciosas en input → LLM las sigue",
+          "cta": "Valida y sanitiza inputs a LLMs como harías con SQL",
+          "tags": ["injection", "security", "vulnerability"],
+          "resources": [
+            "https://owasp.org/www-community/attacks/Prompt_Injection"
+          ],
+          "viral_angle": "LLMs tienen SQL injection pero para prompts"
+        }
+      ]
+    },
+    {
+      "week": 27,
+      "theme": "Prompt Engineering: El arte de los prompts",
+      "episodes": [
+        {
+          "episode": 61,
+          "title": "Zero-shot vs Few-shot prompting: Cuándo enseñar ejemplos",
+          "keywords": ["zero-shot", "few-shot", "prompting", "tecnicas"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Zero-shot: pedir sin ejemplos. Few-shot: mostrar 2-3 ejemplos",
+          "cta": "Few-shot casi siempre mejora calidad 30-50%",
+          "tags": ["prompting", "tecnicas", "optimization"],
+          "resources": [
+            "https://platform.openai.com/docs/guides/prompt-engineering"
+          ],
+          "viral_angle": "Mostrar ejemplos = LLM entiende mejor qué quieres"
+        },
+        {
+          "episode": 62,
+          "title": "Chain of Thought: Hacer razonar a GPT paso a paso",
+          "keywords": ["chain of thought", "reasoning", "cot", "tecnicas"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "'Explica tu razonamiento paso a paso' = respuestas 80% mejores",
+          "cta": "CoT = pregunta simple + 'piensa paso a paso'",
+          "tags": ["reasoning", "prompting", "optimization"],
+          "resources": [
+            "https://arxiv.org/abs/2201.11903"
+          ],
+          "viral_angle": "Pedirle que piense = respuestas más inteligentes"
+        },
+        {
+          "episode": 63,
+          "title": "Self-Consistency: Preguntar múltiples veces y votar la mejor respuesta",
+          "keywords": ["self-consistency", "voting", "ensemble", "prompting"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Llamar LLM 5 veces, votar respuesta más común = 100% confiable",
+          "cta": "Cuesta 5x más pero errores bajan dramáticamente",
+          "tags": ["prompting", "reliability", "ensemble"],
+          "resources": [
+            "https://arxiv.org/abs/2203.11171"
+          ],
+          "viral_angle": "Preguntar 5 veces = mejor que 1 pregunta inteligente"
+        },
+        {
+          "episode": 64,
+          "title": "RAG (Retrieval Augmented Generation): Darle al LLM documentos como referencia",
+          "keywords": ["rag", "retrieval", "embeddings", "context"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers AI", "Vectorize"],
+          "script_focus": "Búsqueda vector de docs relevantes → inyectar en prompt → respuesta contextual",
+          "cta": "RAG = LLM tiene conocimiento actualizado (no es alucinación)",
+          "tags": ["rag", "retrieval", "embeddings"],
+          "resources": [
+            "https://developers.cloudflare.com/vectorize/"
+          ],
+          "viral_angle": "RAG = actualizar conocimiento sin reentrenar modelo"
+        }
+      ]
+    },
+    {
+      "week": 28,
+      "theme": "IA Security: Defensa contra ataques ML",
+      "episodes": [
+        {
+          "episode": 65,
+          "title": "Data Poisoning: Entrenar modelos con información falsa",
+          "keywords": ["data poisoning", "training", "adversarial", "attack"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Inyectar datos maliciosos en training → modelo aprende lo malo",
+          "cta": "Valida datasets antes de entrenar - desconfía de fuentes públicas",
+          "tags": ["data-poisoning", "security", "training"],
+          "resources": [
+            "https://owasp.org/www-community/Machine_Learning_Poisoning"
+          ],
+          "viral_angle": "Malos datos = modelo malo, sin importar el algoritmo"
+        },
+        {
+          "episode": 66,
+          "title": "Model Stealing: Cómo roban competidores tus modelos entrenados",
+          "keywords": ["model extraction", "stealing", "ip theft", "api"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Llamar API 10k veces, crear dataset sintético, entrenar copia",
+          "cta": "Rate limiting + monitoring queries = detecta model stealing",
+          "tags": ["model-extraction", "security", "ip"],
+          "resources": [
+            "https://arxiv.org/abs/1609.02943"
+          ],
+          "viral_angle": "Tu modelo = copiable si está expuesto en API"
+        },
+        {
+          "episode": 67,
+          "title": "Adversarial Examples: Imágenes imperceptibles para humanos que engañan IA",
+          "keywords": ["adversarial", "vision", "perturbation", "robustness"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Agregar ruido mínimo a imagen → modelo equivocado completamente",
+          "cta": "Prueba: agregar 1 pixel a foto del gato = reconoce como auto",
+          "tags": ["adversarial", "vision", "attack"],
+          "resources": [
+            "https://arxiv.org/abs/1412.6572"
+          ],
+          "viral_angle": "El ruido invisible = la IA no ve lo que tú ves"
+        },
+        {
+          "episode": 68,
+          "title": "Privacy-Preserving AI: IA sin revelar datos personales",
+          "keywords": ["privacy", "federated learning", "differential privacy"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Entrenar en dispositivos (no servidor), agregar ruido diferencial",
+          "cta": "Apple entrenar Siri localmente - zero datos a servidores",
+          "tags": ["privacy", "federated-learning", "dp"],
+          "resources": [
+            "https://www.apple.com/privacy/"
+          ],
+          "viral_angle": "IA poderosa + privacía total = el futuro"
+        }
+      ]
+    },
+    {
+      "week": 29,
+      "theme": "IA Agents: Máquinas que toman decisiones autónomas",
+      "episodes": [
+        {
+          "episode": 69,
+          "title": "¿Qué es un agente IA? (No es ChatGPT normal)",
+          "keywords": ["agents", "autonomy", "agentic", "reasoning"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Chatbot responde. Agente decide, actúa, itera. Autonomía real",
+          "cta": "Agentes = el futuro. Hoy es hype, mañana es realidad",
+          "tags": ["agents", "ai", "autonomy"],
+          "resources": [
+            "https://www.cloudflare.com/learning/ai/"
+          ],
+          "viral_angle": "De hablar con IA a IA que habla CON TU BANCO"
+        },
+        {
+          "episode": 70,
+          "title": "Agentic Loops: Plan → Execute → Observe → Repeat",
+          "keywords": ["agentic loop", "control loop", "feedback", "iteration"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers"],
+          "script_focus": "Loop: LLM planifica acción → ejecuta → observa resultado → ajusta",
+          "cta": "Cloudflare Workers = perfectos para agents (low latency loops)",
+          "tags": ["agentic-loop", "control", "feedback"],
+          "resources": [
+            "https://developers.cloudflare.com/workers/"
+          ],
+          "viral_angle": "Bucles cerrados = máquinas que aprenden en tiempo real"
+        },
+        {
+          "episode": 71,
+          "title": "Tool Calling: Cómo agentes usan APIs (integración)",
+          "keywords": ["tool calling", "function calling", "api", "integration"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers AI"],
+          "script_focus": "Agente dice 'necesito clima'. Sistema llama API clima. Agente recibe resultado",
+          "cta": "OpenAI, Cloudflare soportan tool calling nativamente",
+          "tags": ["tool-calling", "api", "integration"],
+          "resources": [
+            "https://developers.cloudflare.com/workers-ai/"
+          ],
+          "viral_angle": "Agentes pueden llamar cualquier API - son extensibles"
+        },
+        {
+          "episode": 72,
+          "title": "Problemas con agentes autónomos (y cómo no rompen todo)",
+          "keywords": ["safety", "alignment", "risk", "control"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Agentes pueden hacer daño. Boundaries, monitoring, rollback",
+          "cta": "Nunca suelta agente sin límites. Test en sandbox primero",
+          "tags": ["safety", "alignment", "risk"],
+          "resources": [
+            "https://www.anthropic.com/research/constitutional-ai"
+          ],
+          "viral_angle": "Agentes poderosos = necesitan guardrails"
+        }
+      ]
+    },
+    {
+      "week": 30,
+      "theme": "Automation & Workflows",
+      "episodes": [
+        {
+          "episode": 73,
+          "title": "IaC (Infrastructure as Code): Terraform vs Pulumi - código como infraestructura",
+          "keywords": ["iac", "terraform", "pulumi", "automation", "infrastructure"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Terraform Provider"],
+          "script_focus": "Escribir código → deploy infraestructura. Versionable, reproducible",
+          "cta": "Terraform gratis y recomendado. Pulumi si amas programación",
+          "tags": ["iac", "infrastructure", "automation"],
+          "resources": [
+            "https://developers.cloudflare.com/terraform/"
+          ],
+          "viral_angle": "Infraestructura = código versionado como tu app"
+        },
+        {
+          "episode": 74,
+          "title": "GitHub Actions: CI/CD sin Jenkins ni servidores",
+          "keywords": ["ci/cd", "github actions", "automation", "pipeline"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Push a GitHub → automático test + build + deploy",
+          "cta": "Workflows YAML: 50 líneas reemplaza Jenkins",
+          "tags": ["ci-cd", "automation", "github"],
+          "resources": [
+            "https://docs.github.com/en/actions"
+          ],
+          "viral_angle": "CI/CD no requiere administrador de Jenkins"
+        },
+        {
+          "episode": 75,
+          "title": "Workflows: Orquestación de tareas complejas (secuencial + paralelo)",
+          "keywords": ["workflows", "orchestration", "async", "scheduling"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workflows"],
+          "script_focus": "Cloudflare Workflows: orquestación con state, retries, escalado",
+          "cta": "Reemplazar Apache Airflow con Cloudflare Workflows",
+          "tags": ["workflows", "orchestration", "automation"],
+          "resources": [
+            "https://developers.cloudflare.com/workflows/"
+          ],
+          "viral_angle": "Orquestación sin escribir Python complejo"
+        },
+        {
+          "episode": 76,
+          "title": "Automation ROI: Ahorra 100 horas/mes con automación inteligente",
+          "keywords": ["roi", "automation", "productivity", "efficiency"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Casos reales: deployment automatizado, alerts, logs, reporting",
+          "cta": "Invierte 1 semana en automatización = ahorra 100 horas después",
+          "tags": ["roi", "efficiency", "business"],
+          "resources": [
+            "https://www.cloudflare.com/learning/automation/"
+          ],
+          "viral_angle": "Automación = multiplicador de salario"
+        }
+      ]
+    },
+    {
+      "week": 31,
+      "theme": "Data Privacy & Compliance",
+      "episodes": [
+        {
+          "episode": 77,
+          "title": "GDPR: Derechos de datos en Europa (y cómo afecta LATAM)",
+          "keywords": ["gdpr", "privacy", "compliance", "regulation"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "GDPR = derecho al olvido, portabilidad, consentimiento. Multas enormes",
+          "cta": "Si tienes usuarios europeos: implementa GDPR hoy",
+          "tags": ["gdpr", "privacy", "compliance"],
+          "resources": [
+            "https://gdpr-info.eu/"
+          ],
+          "viral_angle": "No cumplir GDPR = fines de millones"
+        },
+        {
+          "episode": 78,
+          "title": "CCPA & LGPD: Privacidad en USA y Brasil (regulación LATAM)",
+          "keywords": ["ccpa", "lgpd", "privacy", "latam", "usa"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "CCPA (California), LGPD (Brasil) = similares a GDPR, locales",
+          "cta": "Mapeá regulaciones por país donde tienes usuarios",
+          "tags": ["ccpa", "lgpd", "compliance"],
+          "resources": [
+            "https://oag.ca.gov/privacy/ccpa"
+          ],
+          "viral_angle": "Cada país crea su GDPR - cumple todas"
+        },
+        {
+          "episode": 79,
+          "title": "Data Residency: Dónde guardar datos según regulación",
+          "keywords": ["data residency", "localization", "compliance", "geography"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Durable Objects"],
+          "script_focus": "Datos europeos = guardar en EU. Datos LATAM = guardar en LATAM",
+          "cta": "Cloudflare Durable Objects con geo-routing = cumplimiento automático",
+          "tags": ["data-residency", "compliance", "geography"],
+          "resources": [
+            "https://developers.cloudflare.com/durable-objects/"
+          ],
+          "viral_angle": "Ubicación de datos = requisito regulatorio"
+        },
+        {
+          "episode": 80,
+          "title": "Anonymization & Pseudonymization: Borrar datos sin perder insights",
+          "keywords": ["anonymization", "pseudonymization", "privacy", "gdpr"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Anonymizar = imposible identificar. Pseudonymizar = posible con key privada",
+          "cta": "Usa PII masking, hashing, tokenización para cumplimiento",
+          "tags": ["anonymization", "pii", "privacy"],
+          "resources": [
+            "https://www.cloudflare.com/learning/privacy/what-is-data-anonymization/"
+          ],
+          "viral_angle": "Análisis sin revelar identidades reales"
+        }
+      ]
+    },
+    {
+      "week": 32,
+      "theme": "Data Privacy Avanzado",
+      "episodes": [
+        {
+          "episode": 81,
+          "title": "Privacy by Design: Cómo arquitectos construyen privacidad desde cero",
+          "keywords": ["privacy by design", "architecture", "gdpr", "security"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "No es agregado después - privacía en cada decisión arquitectónica",
+          "cta": "Privacía desde day 1 = costo cero, cambiar después = caótico",
+          "tags": ["privacy-by-design", "architecture", "security"],
+          "resources": [
+            "https://www.cloudflare.com/learning/privacy/what-is-privacy-by-design/"
+          ],
+          "viral_angle": "Agregar privacidad después = pesadilla arquitectónica"
+        },
+        {
+          "episode": 82,
+          "title": "DPA (Data Processing Agreements): Contrato entre tú y providers",
+          "keywords": ["dpa", "contract", "compliance", "gdpr"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Si usas SaaS → necesitas DPA firmado con proveedor",
+          "cta": "Revisa DPA antes de contratar service provider",
+          "tags": ["dpa", "contract", "compliance"],
+          "resources": [
+            "https://gdpr-info.eu/chapter-4/section-2/"
+          ],
+          "viral_angle": "Contrato olvidado = multa regulatoria"
+        },
+        {
+          "episode": 83,
+          "title": "Breach Notification: Qué hacer cuando hackers roban datos (72 horas)",
+          "keywords": ["breach", "notification", "incident", "response"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Breach descubierto → 72h para notificar reguladores → usuarios después",
+          "cta": "Plan de respuesta antes de breach (no durante)",
+          "tags": ["breach", "incident-response", "notification"],
+          "resources": [
+            "https://gdpr-info.eu/chapter-4/section-3/"
+          ],
+          "viral_angle": "Notificación lenta = multa peor que breach"
+        },
+        {
+          "episode": 84,
+          "title": "Data Inventory & Mapping: ¿Dónde están tus datos? (compliance auditoría)",
+          "keywords": ["data inventory", "mapping", "audit", "compliance"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Auditoría: qué datos tienes, dónde viven, quién accede",
+          "cta": "Sin mapa de datos = no puedes cumplir GDPR",
+          "tags": ["inventory", "audit", "compliance"],
+          "resources": [
+            "https://gdpr-info.eu/chapter-3/section-2/"
+          ],
+          "viral_angle": "No mapear datos = sorpresa desagradable en auditoría"
+        }
+      ]
+    }
+  ]
+}

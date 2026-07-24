@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOVI Academy - Control Center</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-top">
+        <img src="https://imagedelivery.net/KJB-rRwHD6dkMpOM_8NFVQ/ce5ed533-5c56-4408-2a71-d7ac811adf00/Gaston" alt="JOVI Academy Logo" class="logo">
+        <div class="header-text">
+          <h1>🎬 JOVI Academy - Control Center</h1>
+          <p class="subtitle">Monitoreo de máquinas, tokens y videos</p>
+        </div>
+      </div>
+      <div class="refresh-info">
+        <span id="lastUpdate">Actualizado: --:--:--</span>
+        <button id="refreshBtn" class="btn-refresh">🔄 Actualizar</button>
+      </div>
+    </header>
+
+    <!-- MÁQUINAS STATUS -->
+    <section class="machines-section">
+      <h2>🖥️ Estado de Máquinas</h2>
+      
+      <!-- Machine 1: Video Upload -->
+      <div class="machine-card" id="machine1">
+        <div class="machine-header">
+          <h3>Máquina 1: Video Upload</h3>
+          <span class="status-badge status-loading">● Cargando...</span>
+        </div>
+        
+        <div class="machine-body">
+          <div class="info-row">
+            <span class="label">Próxima ejecución:</span>
+            <span class="value" id="m1-next">--:--:-- UTC</span>
+          </div>
+          
+          <div class="subsection">
+            <h4>📹 Últimos 3 videos</h4>
+            <div class="videos-list" id="m1-videos">
+              <div class="loading">Cargando...</div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h4>🔑 Estado de Tokens</h4>
+            <div class="tokens-grid" id="m1-tokens">
+              <div class="loading">Cargando...</div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h4>📰 RSS Feed</h4>
+            <div class="rss-info" id="m1-rss">
+              <div class="loading">Cargando...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Machine 2: Script Generator -->
+      <div class="machine-card" id="machine2">
+        <div class="machine-header">
+          <h3>Máquina 2: Script Generator</h3>
+          <span class="status-badge status-loading">● Cargando...</span>
+        </div>
+        
+        <div class="machine-body">
+          <div class="info-row">
+            <span class="label">Próxima ejecución:</span>
+            <span class="value" id="m2-next">--:--:-- UTC</span>
+          </div>
+          
+          <div class="subsection">
+            <h4>📝 Scripts pre-generados</h4>
+            <div class="scripts-info" id="m2-scripts">
+              <div class="loading">Cargando...</div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h4>🔑 Estado de Tokens</h4>
+            <div class="tokens-grid" id="m2-tokens">
+              <div class="loading">Cargando...</div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h4>⏱️ Último batch</h4>
+            <div class="batch-info" id="m2-batch">
+              <div class="loading">Cargando...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMEN GENERAL -->
+    <section class="summary-section">
+      <h2>📊 Resumen del Mes</h2>
+      
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="summary-value" id="summary-videos">--</div>
+          <div class="summary-label">Videos subidos</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-value" id="summary-scripts">--</div>
+          <div class="summary-label">Scripts generados</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-value" id="summary-uptime">--%</div>
+          <div class="summary-label">Uptime</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-value" id="summary-cost">$--</div>
+          <div class="summary-label">Costo mes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALERTAS -->
+    <section class="alerts-section">
+      <h2>⚠️ Alertas & Issues</h2>
+      
+      <div class="alerts-container" id="alerts">
+        <div class="alert alert-info">
+          <span class="alert-icon">ℹ️</span>
+          <span class="alert-message">Cargando alertas...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIGURACIÓN -->
+    <section class="config-section">
+      <h2>⚙️ Configuración</h2>
+      
+      <details>
+        <summary>Ver variables de entorno</summary>
+        <div class="config-content">
+          <p>Las siguientes variables están configuradas:</p>
+          <ul id="config-vars">
+            <li>Cargando...</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </div>
+
+  <script src="api.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

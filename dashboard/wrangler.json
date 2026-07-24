@@ -1,0 +1,17 @@
+{
+  "name": "jovi-academy-dashboard",
+  "type": "javascript",
+  "main": "index.html",
+  "compatibility_date": "2024-01-01",
+  "pages_build_output_dir": ".",
+  "env": {
+    "production": {
+      "routes": [
+        {
+          "pattern": "jovi-dashboard.angaflow.com/*",
+          "zone_name": "angaflow.com"
+        }
+      ]
+    }
+  }
+}

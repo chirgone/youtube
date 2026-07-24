@@ -1,0 +1,430 @@
+{
+  "quarter": "Q1",
+  "year": 2026,
+  "theme": "Fundamentos: Seguridad & Zero Trust",
+  "description": "Semanas 1-12: Cimientos de ciberseguridad moderna, arquitectura Zero Trust, identidad",
+  "episodes": [
+    {
+      "week": 1,
+      "theme": "Zero Trust Basics",
+      "episodes": [
+        {
+          "episode": 1,
+          "title": "¿Qué es Zero Trust? La revolución en seguridad que Google inició",
+          "keywords": ["Zero Trust", "seguridad", "arquitectura moderna", "no confíes en nadie"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One", "Access"],
+          "script_focus": "Explicar Zero Trust vs VPN tradicional con analogía simple",
+          "cta": "Entra a developers.cloudflare.com/cloudflare-one para arquitectura Zero Trust",
+          "tags": ["zero-trust", "seguridad", "arquitectura"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/",
+            "https://www.cloudflare.com/learning/security/what-is-zero-trust/"
+          ],
+          "viral_angle": "Google lo usa, ¿por qué no tu empresa?"
+        },
+        {
+          "episode": 2,
+          "title": "Zero Trust vs VPN: Por qué las empresas están abandonando VPN en 2026",
+          "keywords": ["VPN", "Zero Trust", "seguridad remota", "trabajo híbrido"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One", "Tunnel"],
+          "script_focus": "Comparación directa: VPN tradicional vs Zero Trust (performance, seguridad, costo)",
+          "cta": "Cloudflare Tunnel reemplaza VPN: cero exposición de IP interna",
+          "tags": ["vpn", "tunnel", "comparativa"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/"
+          ],
+          "viral_angle": "VPN está muerto en 2026"
+        },
+        {
+          "episode": 3,
+          "title": "Cloudflare One: Arquitectura completa de Zero Trust en 3 minutos",
+          "keywords": ["Cloudflare One", "arquitectura", "seguridad"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Access", "Gateway", "WARP", "Tunnel"],
+          "script_focus": "Diagrama: cómo Access + Gateway + Tunnel + WARP se integran",
+          "cta": "Deploy tu primer Access policy: 5 minutos",
+          "tags": ["cloudflare-one", "arquitectura", "sase"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/",
+            "https://developers.cloudflare.com/cloudflare-one/setup/manage-devices/doh/"
+          ],
+          "viral_angle": "Reemplazar stack entero de seguridad con un proveedor"
+        },
+        {
+          "episode": 4,
+          "title": "Zero Trust en startups: ¿Realmente lo necesitas o es hype?",
+          "keywords": ["startups", "Zero Trust", "ROI", "seguridad", "costo"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One"],
+          "script_focus": "Cuándo adoptar Zero Trust (5+ empleados remotos, datos sensibles, cumplimiento)",
+          "cta": "Usa Cloudflare free tier para empezar (sin tarjeta de crédito)",
+          "tags": ["startups", "pyme", "roi"],
+          "resources": [
+            "https://www.cloudflare.com/en-gb/resources/research/zero-trust/"
+          ],
+          "viral_angle": "No es para grandes, también para tu startup"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "theme": "Zero Trust Deep Dive",
+      "episodes": [
+        {
+          "episode": 5,
+          "title": "Identity & Access Management: Por qué MFA no es suficiente",
+          "keywords": ["IAM", "identidad", "MFA", "SAML", "OAuth"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Access"],
+          "script_focus": "MFA ≠ seguridad moderna. Necesitas verificación de dispositivo + contexto",
+          "cta": "Cloudflare Access verifica: identidad + dispositivo + ubicación + comportamiento",
+          "tags": ["iam", "mfa", "identidad"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/identity/idps/"
+          ],
+          "viral_angle": "Tu contraseña + MFA puede NO ser suficiente"
+        },
+        {
+          "episode": 6,
+          "title": "SAML vs OAuth vs OpenID Connect: Cuál usar y por qué",
+          "keywords": ["SAML", "OAuth", "OpenID Connect", "autenticación", "federación"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Access"],
+          "script_focus": "Comparar protocolos: casos de uso, flujos, seguridad",
+          "cta": "Cloudflare soporta todos - usa lo que tu identidad provider usa",
+          "tags": ["autenticacion", "protocolos", "sso"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/identity/idps/generic-saml/"
+          ],
+          "viral_angle": "El protocolo correcto puede ahorrar semanas de integración"
+        },
+        {
+          "episode": 7,
+          "title": "Device Posture: Verificar que la máquina es segura ANTES de acceder",
+          "keywords": ["device posture", "endpoint security", "MDM", "verificación"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One"],
+          "script_focus": "Device posture checks: antivirus, disk encryption, OS version, jailbreak",
+          "cta": "Cloudflare verifica posture automáticamente en acceso",
+          "tags": ["device-posture", "endpoint", "seguridad"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/identity/devices/"
+          ],
+          "viral_angle": "No todo acceso remoto es seguro - verifica la máquina"
+        },
+        {
+          "episode": 8,
+          "title": "Conditional Access: Dale permisos basados en contexto, no solo roles",
+          "keywords": ["conditional access", "context", "políticas", "seguridad adaptativa"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Access"],
+          "script_focus": "Políticas dinámicas: si ubicación=Perú+hora=3AM → bloquea, si oficina+mañana → permite",
+          "cta": "Cloudflare Access soporta 50+ condiciones de contexto",
+          "tags": ["conditional-access", "politicas", "adaptativo"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/identity/policies/"
+          ],
+          "viral_angle": "La seguridad rígida pierde talento - hazla inteligente"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "theme": "Identity & Access Management (IAM)",
+      "episodes": [
+        {
+          "episode": 9,
+          "title": "¿Qué es IAM? Identity & Access Management explicado para CTOs",
+          "keywords": ["IAM", "identity management", "acceso", "privilegios"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "IAM es el corazón de Zero Trust - quién eres, qué puedes hacer",
+          "cta": "Empieza con un directorio centralizado (Azure AD, Okta, Cloudflare Access)",
+          "tags": ["iam", "identidad", "acceso"],
+          "resources": [
+            "https://www.cloudflare.com/learning/access-management/what-is-identity-and-access-management/"
+          ],
+          "viral_angle": "IAM roto = brechas inevitables"
+        },
+        {
+          "episode": 10,
+          "title": "Least Privilege Access: Dale a cada usuario SOLO lo que necesita",
+          "keywords": ["least privilege", "POLP", "acceso mínimo", "riesgo"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Access"],
+          "script_focus": "Por qué todos tienen admin = desastre. Cada rol, permisos específicos",
+          "cta": "Cloudflare Access: políticas granulares por grupo, departamento, rol",
+          "tags": ["least-privilege", "polp", "minimos-permisos"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/identity/policies/"
+          ],
+          "viral_angle": "Admin para todos = hackers adentro sin restricciones"
+        },
+        {
+          "episode": 11,
+          "title": "Privilege Escalation: Cómo detener ataques de elevación de privilegios",
+          "keywords": ["escalacion de privilegios", "exploit", "vulnerabilidad"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Escalation techniques: sudo abuse, kernel exploits, misconfigurations",
+          "cta": "Monitorea logs de sudo, revisa permisos filesystem regularmente",
+          "tags": ["escalation", "exploit", "intrusion"],
+          "resources": [
+            "https://owasp.org/www-community/attacks/Privilege_escalation"
+          ],
+          "viral_angle": "Un usuario normal = acceso a tu base de datos en 5 min"
+        },
+        {
+          "episode": 12,
+          "title": "User Behavior Analytics: Detecta intrrusos por anomalías en el comportamiento",
+          "keywords": ["UBA", "behavior analytics", "anomalía", "detección"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One"],
+          "script_focus": "UBA vs rules: usuarios normales vs intrusos, patrones, tiempos anormales",
+          "cta": "Cloudflare analiza logs automáticamente (logs via Logpush)",
+          "tags": ["uba", "analytics", "deteccion"],
+          "resources": [
+            "https://developers.cloudflare.com/logs/logpush/"
+          ],
+          "viral_angle": "La IA detecta intrusos que signatures no ven"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "theme": "Cloud Security Fundamentals",
+      "episodes": [
+        {
+          "episode": 13,
+          "title": "¿Qué es Cloud Security? Responsabilidad compartida explicada",
+          "keywords": ["cloud security", "responsabilidad compartida", "provider", "cliente"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "AWS/Azure/GCP = ellos cuidan la plataforma, tú cuidas los datos",
+          "cta": "Nunca asumas que cloud = seguro automático",
+          "tags": ["cloud", "seguridad", "responsabilidad"],
+          "resources": [
+            "https://www.cloudflare.com/learning/cloud/cloud-security/"
+          ],
+          "viral_angle": "Cloud no es seguro de magia - tú configuras la seguridad"
+        },
+        {
+          "episode": 14,
+          "title": "Misconfigurations: El 90% de breaches cloud son por mal config",
+          "keywords": ["misconfiguration", "s3 bucket", "seguridad", "default"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Casos reales: S3 bucket público, RDS exposed, secrets en código",
+          "cta": "Usa herramientas: CloudMapper, CloudSploit, Prowler para auditar",
+          "tags": ["misconfiguration", "cloud", "auditoria"],
+          "resources": [
+            "https://www.cloudflare.com/learning/security/cloud-security-misconfigurations/"
+          ],
+          "viral_angle": "Una línea de configuración = millones en datos robados"
+        },
+        {
+          "episode": 15,
+          "title": "Secrets Management: Dónde (y dónde NO) guardar API keys",
+          "keywords": ["secrets", "API keys", "credenciales", "vault"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare Workers", "Secrets Store"],
+          "script_focus": "NO en código, NO en .env, NO en git - usa Vault/Secrets Manager",
+          "cta": "Cloudflare Workers: secretos injected en runtime, nunca en código",
+          "tags": ["secrets", "vault", "credenciales"],
+          "resources": [
+            "https://developers.cloudflare.com/workers/configuration/secrets/"
+          ],
+          "viral_angle": "GitHub public repos = prueba que tus secrets están expostos"
+        },
+        {
+          "episode": 16,
+          "title": "Encryption at Rest vs In Transit: Por qué necesitas ambas",
+          "keywords": ["encryption", "rest", "transit", "TLS", "E2E"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["TLS"],
+          "script_focus": "At rest: datos guardados. In transit: datos viajando. Protege ambas",
+          "cta": "HTTPS for everything, encrypted databases, backups encriptados",
+          "tags": ["encryption", "tls", "seguridad"],
+          "resources": [
+            "https://developers.cloudflare.com/ssl/origin-configuration/ssl-tls/"
+          ],
+          "viral_angle": "Sin encriptación en tránsito = MITM en 5 minutos"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "theme": "Criptografía moderna (sin matemáticas)",
+      "episodes": [
+        {
+          "episode": 17,
+          "title": "¿Qué es criptografía? Explicada para no-matemáticos",
+          "keywords": ["criptografia", "encriptacion", "cesar", "aes", "rsa"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Analogía: cerrar puerta con llave. Historia: de Cesar a AES",
+          "cta": "No necesitas entender matemática para usar criptografía correctamente",
+          "tags": ["criptografia", "educacion", "basicos"],
+          "resources": [
+            "https://www.cloudflare.com/learning/ssl/what-is-encryption/"
+          ],
+          "viral_angle": "Criptografía es simple, los malos usos son complicados"
+        },
+        {
+          "episode": 18,
+          "title": "Hashing: Por qué NO se puede desencriptar (y por qué eso es bueno)",
+          "keywords": ["hashing", "md5", "sha256", "irreversible", "integridad"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Hash = huella digital. Datos → hash. Hash ≠ datos (uno solo sentido)",
+          "cta": "Protege passwords y verificación de integridad con hashing (SHA-256)",
+          "tags": ["hash", "integridad", "passwords"],
+          "resources": [
+            "https://www.cloudflare.com/learning/ssl/what-is-a-hash-function/"
+          ],
+          "viral_angle": "GitHub sabe si tu código cambió sin guardar el original"
+        },
+        {
+          "episode": 19,
+          "title": "Certificados SSL/TLS: Por qué ve un candadito en la barra",
+          "keywords": ["SSL", "TLS", "certificados", "https", "CA"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["SSL/TLS"],
+          "script_focus": "Cadena de confianza: Autoridad Certificadora → tu certificado → browser confía",
+          "cta": "Cloudflare SSL gratis: full setup en 1 minuto",
+          "tags": ["ssl", "tls", "https"],
+          "resources": [
+            "https://developers.cloudflare.com/ssl/origin-configuration/"
+          ],
+          "viral_angle": "Sin HTTPS = browser te marca como inseguro AUTOMÁTICAMENTE"
+        },
+        {
+          "episode": 20,
+          "title": "Public Key Cryptography (RSA): Cómo encriptar sin compartir la llave",
+          "keywords": ["RSA", "public key", "private key", "asimetrica"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "Dos llaves: pública (para encriptar) + privada (para desencriptar). Magic!",
+          "cta": "SSH usa RSA - tus llaves privadas son tus credenciales",
+          "tags": ["rsa", "public-key", "asimetrica"],
+          "resources": [
+            "https://www.cloudflare.com/learning/ssl/what-is-asymmetric-encryption/"
+          ],
+          "viral_angle": "Compartes llave pública con todos, guardas privada en vault"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "theme": "Network Segmentation & VLANs",
+      "episodes": [
+        {
+          "episode": 21,
+          "title": "Network Segmentation: Por qué tu red NO puede ser un solo pastel",
+          "keywords": ["segmentation", "vlans", "network zones", "separacion"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One"],
+          "script_focus": "Si se hackean Dev, no pueden acceder DB. Tres redes = tres castillos",
+          "cta": "Cloudflare Zero Trust: segmentación sin hardware complejo",
+          "tags": ["segmentation", "vlans", "network"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/"
+          ],
+          "viral_angle": "Una red = un hacker accede a TODO. Segmenta ahora"
+        },
+        {
+          "episode": 22,
+          "title": "DMZ: Dónde poner tus servidores públicos sin riesgo",
+          "keywords": ["dmz", "demilitarized zone", "separacion", "webservers"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "DMZ = buffer entre internet (pública) y redes internas (privadas)",
+          "cta": "Pon webservers en DMZ, DB en red privada, nunca directa a internet",
+          "tags": ["dmz", "architecture", "network-design"],
+          "resources": [
+            "https://www.cloudflare.com/learning/security/glossary/dmz/"
+          ],
+          "viral_angle": "Sin DMZ = webserver comprometido = acceso a TODO"
+        },
+        {
+          "episode": 23,
+          "title": "Firewalls: El guardián entre redes (y por qué necesitas 2)",
+          "keywords": ["firewall", "iptables", "ufw", "stateful", "stateless"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["WAF", "DDoS Protection"],
+          "script_focus": "Firewall = reglas de tráfico. Layer 4 (TCP/UDP) vs Layer 7 (App)",
+          "cta": "Cloudflare WAF: protección Layer 7 (aplicación), tu firewall: Layer 4",
+          "tags": ["firewall", "waf", "proteccion"],
+          "resources": [
+            "https://developers.cloudflare.com/waf/"
+          ],
+          "viral_angle": "Un firewall no es suficiente - capas de defensa"
+        },
+        {
+          "episode": 24,
+          "title": "Zero Trust Segmentation: VLANs sin crear subredes",
+          "keywords": ["zero trust", "microsegmentation", "cloudflare one"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One"],
+          "script_focus": "Software-defined: Cloudflare proporciona segmentación sin hardware",
+          "cta": "Tunnel + Access = segmentación global sin comprar switch VLAN",
+          "tags": ["zero-trust", "microsegmentation", "cloudflare-one"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/"
+          ],
+          "viral_angle": "Hardware VLAN es 2010 - hoy es software-defined"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "quarter": "Q2",
+  "year": 2026,
+  "theme": "Cloudflare Deep Dive: Productos & Arquitectura",
+  "description": "Semanas 13-24: Workers, Pages, WAF, DDoS, Tunnel, One - productos prácticos",
+  "episodes": [
+    {
+      "week": 13,
+      "theme": "Cloudflare Workers: Serverless en el Edge",
+      "episodes": [
+        {
+          "episode": 25,
+          "title": "¿Qué son Cloudflare Workers? Serverless en 200 millones de puntos",
+          "keywords": ["Workers", "serverless", "edge computing", "cloudflare"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers"],
+          "script_focus": "Workers = código tuyo en 200M servidores. 30ms latencia global",
+          "cta": "Tu primer Worker en 2 minutos: wrangler init + deploy",
+          "tags": ["workers", "serverless", "edge"],
+          "resources": [
+            "https://developers.cloudflare.com/workers/get-started/guide/"
+          ],
+          "viral_angle": "Código que corre a 30ms de tu usuario en cualquier país"
+        },
+        {
+          "episode": 26,
+          "title": "Workers vs Lambda: ¿Cuál es más rápido? (benchmark real 2026)",
+          "keywords": ["workers", "lambda", "performance", "costo", "comparacion"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers"],
+          "script_focus": "Cold start, latency, pricing - data real con Cloudflare metrics",
+          "cta": "Workers: 10ms startup vs Lambda 500ms. Pruébalo tu mismo",
+          "tags": ["benchmark", "performance", "serverless"],
+          "resources": [
+            "https://developers.cloudflare.com/workers/platform/performance/"
+          ],
+          "viral_angle": "AWS dice serverless rápido... pero Cloudflare lo es MÁS"
+        },
+        {
+          "episode": 27,
+          "title": "Tu primer Worker en vivo: Redireccionador URL en 2 minutos",
+          "keywords": ["workers", "live coding", "tutorial", "basico"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers"],
+          "script_focus": "Live coding: crear, testear, deployar un Worker simple",
+          "cta": "github.com/chirgone/youtube/scripts/worker-redirect",
+          "tags": ["tutorial", "live-coding", "workers"],
+          "resources": [
+            "https://developers.cloudflare.com/workers/examples/"
+          ],
+          "viral_angle": "Si puedes copiar-pegar, puedes hacer tu primer Worker"
+        },
+        {
+          "episode": 28,
+          "title": "Workers + KV: Base de datos global en 150ms desde cualquier parte",
+          "keywords": ["KV", "database", "cache", "global", "performance"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers", "KV"],
+          "script_focus": "KV = cache global. Leer desde Tokyo = 150ms. Desde Perú = 150ms",
+          "cta": "KV gratis: 100k reads/día, suficiente para muchas apps",
+          "tags": ["kv", "cache", "database"],
+          "resources": [
+            "https://developers.cloudflare.com/kv/get-started/"
+          ],
+          "viral_angle": "Base de datos global sin copiar datos a múltiples regiones"
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "theme": "Cloudflare Pages: Frontend moderno",
+      "episodes": [
+        {
+          "episode": 29,
+          "title": "Cloudflare Pages vs Vercel vs Netlify: Showdown 2026",
+          "keywords": ["pages", "vercel", "netlify", "frontend", "comparativa"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Pages"],
+          "script_focus": "Features, pricing, performance - cuál elegir para cada caso",
+          "cta": "Pages: $0 (free tier muy generoso, soporta React/Next/Vue)",
+          "tags": ["pages", "frontend", "hosting"],
+          "resources": [
+            "https://developers.cloudflare.com/pages/get-started/"
+          ],
+          "viral_angle": "Gratis + global + performance > Vercel + costo"
+        },
+        {
+          "episode": 30,
+          "title": "Tu sitio estático en producción: De GitHub a global en 30 segundos",
+          "keywords": ["pages", "deployment", "github", "git", "automation"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Pages"],
+          "script_focus": "Git push = automático deploy global. No más FTP",
+          "cta": "Conecta GitHub repo a Pages: 3 clics",
+          "tags": ["deployment", "ci-cd", "github"],
+          "resources": [
+            "https://developers.cloudflare.com/pages/platform/github-integration/"
+          ],
+          "viral_angle": "Git push = live en 5 segundos, sin Jenkins"
+        },
+        {
+          "episode": 31,
+          "title": "Pages Functions: Lógica serverless en tu frontend",
+          "keywords": ["functions", "serverless", "backend", "api", "workers"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Pages", "Workers"],
+          "script_focus": "Functions = Workers dentro de Pages. API sin servidor separado",
+          "cta": "Pages + Functions = frontend + backend integrados",
+          "tags": ["functions", "api", "serverless"],
+          "resources": [
+            "https://developers.cloudflare.com/pages/functions/"
+          ],
+          "viral_angle": "No necesitas backend separado - Functions lo hace todo"
+        },
+        {
+          "episode": 32,
+          "title": "Analytics: Monitorea visitantes reales (Web Analytics Engine)",
+          "keywords": ["analytics", "monitoring", "users", "metrics", "observability"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Pages", "Analytics Engine"],
+          "script_focus": "Quiénes son tus usuarios, de dónde vienen, qué hacen",
+          "cta": "Web Analytics gratis: sin JavaScript, sin cookies, sin rastreo invasivo",
+          "tags": ["analytics", "monitoring", "metrics"],
+          "resources": [
+            "https://developers.cloudflare.com/analytics/"
+          ],
+          "viral_angle": "Analytics sin Google (privacidad + velocidad)"
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "theme": "DDoS Protection: Defensa contra ataques",
+      "episodes": [
+        {
+          "episode": 33,
+          "title": "¿Qué es un ataque DDoS? Explicado para CTOs",
+          "keywords": ["ddos", "distributed denial of service", "ataque", "botnet"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["DDoS Protection"],
+          "script_focus": "DDoS = muchos bots bombardeando tu sitio. Cómo funciona, por qué duele",
+          "cta": "Cloudflare bloquea 73 billones de amenazas DDoS al mes",
+          "tags": ["ddos", "ataque", "defensa"],
+          "resources": [
+            "https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/"
+          ],
+          "viral_angle": "1000 bots por segundo = tu sitio muerto en 30 segundos"
+        },
+        {
+          "episode": 34,
+          "title": "Layer 7 attacks: Los DDoS que afectan aplicaciones (no solo red)",
+          "keywords": ["layer 7", "application ddos", "ssl", "http", "avanzado"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["DDoS Protection", "WAF"],
+          "script_focus": "HTTPS DDoS, cache bypass, HTTP floods - técnicas modernas",
+          "cta": "Cloudflare separa traffic legítimo de bots Layer 7",
+          "tags": ["layer-7", "ddos", "aplicacion"],
+          "resources": [
+            "https://www.cloudflare.com/learning/ddos/layer-7-ddos-attack/"
+          ],
+          "viral_angle": "Layer 3 attacks son fácil de bloquear. Layer 7 es donde está la guerra"
+        },
+        {
+          "episode": 35,
+          "title": "Rate Limiting: Bloqueando bots inteligentes sin tocar usuarios reales",
+          "keywords": ["rate limiting", "throttling", "bots", "defense"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["WAF", "Rate Limiting"],
+          "script_focus": "X requests por segundo = bloqueo inteligente",
+          "cta": "Cloudflare rate limiting: basado en IP, cookie, header",
+          "tags": ["rate-limiting", "bots", "defensa"],
+          "resources": [
+            "https://developers.cloudflare.com/waf/rate-limiting-rules/"
+          ],
+          "viral_angle": "API abierta = bots scrapeando. Rate limit ahora"
+        },
+        {
+          "episode": 36,
+          "title": "Tu primer DDoS: Cómo probarlo sin romper ley",
+          "keywords": ["ddos test", "pentest", "legal", "lab", "seguridad"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["DDoS Protection"],
+          "script_focus": "Load testing herramientas (legales), tu propio lab, testing responsable",
+          "cta": "ApacheBounch, LoadImpact - herramientas legales de test",
+          "tags": ["testing", "ddos", "lab"],
+          "resources": [
+            "https://www.cloudflare.com/learning/security/ddos-prevention/"
+          ],
+          "viral_angle": "Testea TU sitio - nunca otro sin permiso"
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "theme": "WAF: Web Application Firewall",
+      "episodes": [
+        {
+          "episode": 37,
+          "title": "¿Cómo bloquea Cloudflare ataques sin ralentizar tu sitio?",
+          "keywords": ["waf", "performance", "latency", "rules", "seguridad"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["WAF"],
+          "script_focus": "WAF = filtro inteligente en el edge. Traffic legítimo = rápido. Malicioso = bloqueado",
+          "cta": "Cloudflare WAF: <1ms overhead, reglas cacheadas globales",
+          "tags": ["waf", "performance", "seguridad"],
+          "resources": [
+            "https://developers.cloudflare.com/waf/"
+          ],
+          "viral_angle": "Protección sin sacrificar velocidad"
+        },
+        {
+          "episode": 38,
+          "title": "OWASP Top 10: Los 10 riesgos que WAF previene",
+          "keywords": ["owasp", "top 10", "vulnerabilidades", "injection", "xss"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["WAF"],
+          "script_focus": "Injection, XSS, CSRF, XXE... WAF bloquea automáticamente",
+          "cta": "Cloudflare OWASP rules: habilitadas por default, 0 configuración",
+          "tags": ["owasp", "vulnerabilidades", "waf"],
+          "resources": [
+            "https://developers.cloudflare.com/waf/managed-rules/owasp-core-ruleset/"
+          ],
+          "viral_angle": "Ataques conocidos desde hace 15 años siguen funcionando - WAF los detiene"
+        },
+        {
+          "episode": 39,
+          "title": "Custom WAF Rules: Proteger TU API específica de ataques",
+          "keywords": ["custom rules", "waf", "api", "logic", "policies"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["WAF"],
+          "script_focus": "Crear reglas personalizadas: si header=X y path=/api/admin → bloquea",
+          "cta": "WAF Expression Language: potente, no necesita programación",
+          "tags": ["custom-rules", "waf", "api"],
+          "resources": [
+            "https://developers.cloudflare.com/waf/custom-rules/"
+          ],
+          "viral_angle": "Reglas genéricas no suficientes - personaliza según tu API"
+        },
+        {
+          "episode": 40,
+          "title": "Bypass WAF: Técnicas de hackers (y cómo defenderse)",
+          "keywords": ["bypass", "waf evasion", "seguridad", "defensa"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["WAF"],
+          "script_focus": "Encoding, obfuscation, timing attacks - técnicas de evasión y defensa",
+          "cta": "Testea tu WAF: intentá bypassear tus propias reglas",
+          "tags": ["bypass", "evasion", "seguridad"],
+          "resources": [
+            "https://www.cloudflare.com/learning/security/waf/what-is-a-waf/"
+          ],
+          "viral_angle": "Conoce el ataque para defenderte mejor"
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "theme": "API Security: Proteger endpoints",
+      "episodes": [
+        {
+          "episode": 41,
+          "title": "¿Por qué 70% de breaches son a través de APIs?",
+          "keywords": ["api security", "breach", "endpoints", "vulnerabilidad"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "APIs documentadas pero no protegidas = puerta abierta",
+          "cta": "Audita todas tus APIs hoy - seguro encontrás issues",
+          "tags": ["api", "security", "breach"],
+          "resources": [
+            "https://owasp.org/www-project-api-security/"
+          ],
+          "viral_angle": "Tu API es más importante que tu sitio web"
+        },
+        {
+          "episode": 42,
+          "title": "Cloudflare API Shield: Rate limiting inteligente para APIs",
+          "keywords": ["api shield", "rate limiting", "protection", "cloudflare"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["API Shield"],
+          "script_focus": "Protege APIs contra brute force, credential stuffing, scraping",
+          "cta": "API Shield: schema validation + rate limiting + mTLS",
+          "tags": ["api-shield", "protection", "rate-limiting"],
+          "resources": [
+            "https://developers.cloudflare.com/api-shield/"
+          ],
+          "viral_angle": "Credential stuffing = millones de intentos. API Shield lo bloquea"
+        },
+        {
+          "episode": 43,
+          "title": "JWT vs OAuth vs mTLS: Cuál usar cuándo (arquitectura)",
+          "keywords": ["jwt", "oauth", "mtls", "autenticacion", "protocolos"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["API Shield"],
+          "script_focus": "Cases: JWT (rápido), OAuth (delegado), mTLS (máximo security)",
+          "cta": "mTLS es el futuro - certificados cliente para APIs",
+          "tags": ["jwt", "oauth", "mtls"],
+          "resources": [
+            "https://developers.cloudflare.com/api-shield/client-certificates/"
+          ],
+          "viral_angle": "mTLS = machine-to-machine authentication (no humanos)"
+        },
+        {
+          "episode": 44,
+          "title": "API versioning: Cómo no romper clientes cuando cambias el backend",
+          "keywords": ["versioning", "api design", "backwards compatibility"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": false,
+          "cloudflare_products": [],
+          "script_focus": "v1/, Accept header, schema evolution - estrategias de versionado",
+          "cta": "Versioná APIs desde el primer dia - es más caro después",
+          "tags": ["versioning", "api-design", "backwards-compatibility"],
+          "resources": [
+            "https://www.cloudflare.com/learning/api/what-is-an-api/"
+          ],
+          "viral_angle": "API sin versionar = deuda técnica explosiva"
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "theme": "Workers AI & Machine Learning",
+      "episodes": [
+        {
+          "episode": 45,
+          "title": "Workers AI vs OpenAI API: ¿Cuándo usar cuál?",
+          "keywords": ["workers ai", "openai", "llm", "models", "costo"],
+          "difficulty": "beginner",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers AI"],
+          "script_focus": "Latency, costo, modelos disponibles - comparativa completa",
+          "cta": "Workers AI: latencia baja, costo similar, models locales",
+          "tags": ["workers-ai", "llm", "openai"],
+          "resources": [
+            "https://developers.cloudflare.com/workers-ai/"
+          ],
+          "viral_angle": "OpenAI es poderoso pero Workers AI es MÁS rápido"
+        },
+        {
+          "episode": 46,
+          "title": "Text Classification: Detectar spam en tiempo real en tu aplicación",
+          "keywords": ["classification", "ml", "spam", "detection", "text"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers AI"],
+          "script_focus": "Entrada: texto. Salida: categoría (spam/ham/legítimo)",
+          "cta": "Workers AI models: HuggingFace distilbert, listos para usar",
+          "tags": ["classification", "spam", "ml"],
+          "resources": [
+            "https://developers.cloudflare.com/workers-ai/models/"
+          ],
+          "viral_angle": "Spam detection sin esperar response de OpenAI"
+        },
+        {
+          "episode": 47,
+          "title": "Image Recognition: Identificar objetos en requests (verificación)",
+          "keywords": ["vision", "image recognition", "object detection", "ml"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers AI"],
+          "script_focus": "Sube imagen → Workers AI → detecta objetos automáticamente",
+          "cta": "Verifica uploads: si la imagen no contiene personas → rechaza",
+          "tags": ["vision", "image-recognition", "ml"],
+          "resources": [
+            "https://developers.cloudflare.com/workers-ai/models/"
+          ],
+          "viral_angle": "Moderation automática sin intervención humana"
+        },
+        {
+          "episode": 48,
+          "title": "Tu primer modelo ML deployado globalmente (live demo)",
+          "keywords": ["ml", "deployment", "workers", "demo", "tutorial"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Workers AI"],
+          "script_focus": "Live: crear Worker + integrar modelo + desplegar",
+          "cta": "github.com/chirgone/youtube/scripts/workers-ai-demo",
+          "tags": ["tutorial", "ml", "deployment"],
+          "resources": [
+            "https://developers.cloudflare.com/workers-ai/get-started/"
+          ],
+          "viral_angle": "Si puedes hacer un Worker, puedes hacer ML"
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "theme": "Cloudflare One: Zero Trust Completo",
+      "episodes": [
+        {
+          "episode": 49,
+          "title": "Access: Reemplazar VPN tradicional (sin exponer IPs internas)",
+          "keywords": ["access", "vpn", "tunnel", "zero trust", "remote"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One", "Access", "Tunnel"],
+          "script_focus": "Acceso a apps internas sin VPN - identidad + dispositivo + contexto",
+          "cta": "Deploy Access: 5 minutos. VPN muere",
+          "tags": ["access", "vpn", "tunnel"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/identity/idps/"
+          ],
+          "viral_angle": "VPN en 2026 es como usar Floppy Disk"
+        },
+        {
+          "episode": 50,
+          "title": "Gateway: Bloquear malware en DNS level (protección proactiva)",
+          "keywords": ["gateway", "dns", "malware", "ddos", "protection"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One", "Gateway"],
+          "script_focus": "DNS query = interceptada. Si es malware → bloqueada antes de conectar",
+          "cta": "Gateway: lista negra de 100M+ dominios maliciosos",
+          "tags": ["gateway", "dns", "malware"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/policies/gateway/"
+          ],
+          "viral_angle": "Bloquear antes de que usuario lo sepa - prevención total"
+        },
+        {
+          "episode": 51,
+          "title": "Tunnel: Conectar recursos internos SIN exponer IPs públicas",
+          "keywords": ["tunnel", "zero trust", "connectivity", "private"],
+          "difficulty": "intermediate",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One", "Tunnel"],
+          "script_focus": "Installer Cloudflare agent en servidor → conexión segura a Cloudflare → acceso vía Access",
+          "cta": "Tunnel: no necesita abriri puertos, firewall cambia a Cloudflare",
+          "tags": ["tunnel", "connectivity", "private"],
+          "resources": [
+            "https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/"
+          ],
+          "viral_angle": "Servidor interno = nunca expuesto a internet"
+        },
+        {
+          "episode": 52,
+          "title": "SASE: Por qué grandes telcos usan Cloudflare One (arquitectura enterprise)",
+          "keywords": ["sase", "enterprise", "zero trust", "architecture"],
+          "difficulty": "advanced",
+          "duration_minutes": 4,
+          "cloudflare_relevant": true,
+          "cloudflare_products": ["Cloudflare One"],
+          "script_focus": "SASE = reemplazar Zscaler, Palo Alto, Fortinet con Cloudflare",
+          "cta": "Megacable, Claro, TIM - telcos LATAM migrando a Cloudflare One",
+          "tags": ["sase", "enterprise", "telco"],
+          "resources": [
+            "https://www.cloudflare.com/solutions/zero-trust/"
+          ],
+          "viral_angle": "Telcos dejan Palo Alto por Cloudflare (más barato, más rápido)"
+        }
+      ]
+    }
+  ]
+}
