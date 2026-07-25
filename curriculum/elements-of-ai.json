@@ -1,0 +1,52 @@
+{
+  "course": "Elements of AI",
+  "language": "es",
+  "source": "https://elementsofai.com/es/",
+  "created_at": "2026-07-24",
+  "episodes": [
+    {
+      "episode": 1,
+      "topic": "I. ¿Cómo deberíamos definir la IA?",
+      "title": "¿Qué es la Inteligencia Artificial? Definición clara en 4 minutos",
+      "description": "Descubre qué es realmente la Inteligencia Artificial más allá de la ciencia ficción. En este video explicamos la diferencia entre IA fuerte y débil, cómo funciona en el mundo real, y por qué está transformando industrias. Desde reconocimiento facial hasta detección de fraude bancario, aprenderás cómo la IA resuelve problemas concretos HOY. Para alumnos, profesionales y curiosos. #IA #InteligenciaArtificial #Educación #Tecnología #ElementsOfAI",
+      "script": "¿Crees que la IA solo existe en películas de ciencia ficción? Equivocado. La Inteligencia Artificial ya está en tu teléfono, en los bancos que protegen tu dinero, y en las recomendaciones que ves cada día.\n\nPero ¿qué es realmente? IA es la capacidad de máquinas para realizar tareas que normalmente requieren inteligencia humana. No es magia: es programación inteligente.\n\nExisten dos tipos. IA débil: lo que usamos hoy. Máquinas especialistas que resuelven problemas específicos muy bien. ChatGPT genera texto. Tu teléfono reconoce tu cara. Netflix adivina qué serie te gustará. IA fuerte: máquinas con consciencia general. Aún no existe.\n\nEjemplo real en LATAM: bancos mexicanos y brasileños usan IA para detectar fraude al analizar millones de transacciones en segundos. Esto es IA débil. Es útil. Es HOY.\n\n¿Por qué importa? La IA está en cada decisión importante: préstamos, diagnósticos médicos, contrataciones. Entenderla no es opcional. Es supervivencia profesional.",
+      "character_count": 758,
+      "estimated_duration_minutes": 4,
+      "tags": ["ia", "inteligencia-artificial", "definicion", "educacion", "tecnologia", "elementsofai"],
+      "thumbnail_prompt": "AI definition infographic: brain icon with circuit board pattern, futuristic blue and purple colors, professional tech design, text overlay 'What is AI?'"
+    },
+    {
+      "episode": 2,
+      "topic": "II. Campos conectados (Parte 1: Machine Learning)",
+      "title": "Machine Learning: Cómo enseñas a las máquinas a aprender",
+      "description": "Machine Learning es el subcampo de IA donde máquinas aprenden de DATOS, no de instrucciones explícitas. En este video explicamos cómo funciona, cuál es la diferencia entre programación tradicional y ML, y vemos ejemplos reales: desde Spotify que aprende tus gustos hasta sistemas de recomendación en e-commerce LATAM. Perfectamente explicado para alumnos y profesionales. #MachineLearning #IA #Educación #Datos #Algoritmos #ElementsOfAI",
+      "script": "Imagina que quieres enseñar a tu hijo a reconocer frutas. Opción 1: darle reglas. 'Las manzanas son rojas, redondas, tienen este tamaño.' Opción 2: mostrarle 1000 frutas. Tu hijo aprende solo. Así funciona Machine Learning.\n\nMachine Learning es cuando máquinas aprenden de DATOS, no de programas. No le dices al algoritmo 'mira el color, mira el tamaño.' Le das ejemplos. El sistema identifica patrones solo.\n\nEjemplo simple: Spotify. No le programaste 'si escucha reggaeton, recomienda reggaeton.' Spotify analiza millones de reproducción. Aprende patrones. Cuando escuchas Bob Marley, sabe que probablemente te guste Bad Bunny. Así recomiendan en Netflix, Amazon.\n\nEn Latinoamérica, tiendas online usan ML para predecir qué comprarás. Analizan: ¿qué hora navegas? ¿Qué categorías ves? ¿En qué dispositivo? Con eso, personalizan ofertas. Sin que nadie lo programe explícitamente.\n\nEste es el futuro: máquinas que aprenden.",
+      "character_count": 756,
+      "estimated_duration_minutes": 4,
+      "tags": ["machine-learning", "ia", "datos", "algoritmos", "educacion", "elementsofai"],
+      "thumbnail_prompt": "Machine Learning diagram: human feeding data to neural network, colorful data points, brain processing pattern, modern tech aesthetic, title 'How Machines Learn'"
+    },
+    {
+      "episode": 3,
+      "topic": "II. Campos conectados (Parte 2: Deep Learning y NLP)",
+      "title": "Deep Learning y NLP: Las IA que entienden lenguaje",
+      "description": "Deep Learning es cómo máquinas imitan el cerebro humano con redes neuronales. Natural Language Processing (NLP) es cómo entienden lenguaje. En este video vemos cómo ChatGPT genera respuestas coherentes, cómo funcionan traductores automáticos, y casos REALES en LATAM: asistentes virtuales en bancos, traducción instantánea en atención al cliente, reconocimiento de voz. Diseñado para alumnos, profesionales y empresarios. #DeepLearning #NLP #ChatGPT #IA #Lenguaje #ElementsOfAI",
+      "script": "Tu cerebro tiene 86 mil millones de neuronas conectadas. Deep Learning intenta copiar eso: redes neuronales artificiales con capas de 'neuronas' que procesan información.\n\nResultado: máquinas que reconocen patrones complejos. Ven una foto de un gato, saben que es gato. Escuchan tu voz, entienden lo que dijiste.\n\nAhora, Natural Language Processing (NLP): máquinas leyendo, entendiendo y generando lenguaje humano. Hace 10 años: imposible. Hoy: ChatGPT, Google Translate, Siri, Alexa.\n\nEjemplo: traducción automática. Google Translate pasó de traducción palabra-por-palabra (horrible) a ENTENDER contexto. 'Banco' significa institución financiera o río. El traductor sabe cuál por contexto. IA entendiendo semántica.\n\nEn LATAM, bancos implementan chatbots que entienden español con acentos y jerga local. Un cliente llama: 'Che, necesito bolsita de plata.' El asistente entiende: argentino queriendo crédito. En tiempo real, sin confusiones.\n\nEsta es la frontera de IA: máquinas que hablan contigo naturalmente.",
+      "character_count": 764,
+      "estimated_duration_minutes": 4,
+      "tags": ["deep-learning", "nlp", "chatgpt", "lenguaje-natural", "ia", "elementsofai"],
+      "thumbnail_prompt": "Neural network visualization: interconnected nodes with data flowing through layers, brain-computer hybrid, neon colors, subtitle 'Understanding Language'"
+    },
+    {
+      "episode": 4,
+      "topic": "III. La filosofía de la IA",
+      "title": "¿Puede pensar una máquina? Filosofía y ética de la IA",
+      "description": "La pregunta más profunda: ¿qué significa pensar? ¿Es ChatGPT consciente o solo predice palabras? Exploramos el Test de Turing, la diferencia entre inteligencia simulada y consciencia, y preguntas éticas cruciales para LATAM: bias en algoritmos, privacidad de datos, desplazamiento laboral. Para cualquiera que quiera entender las implicaciones REALES de la IA en sociedad. #Filosofía #IA #Ética #Consciencia #Tecnología #ElementsOfAI",
+      "script": "En 1950, Alan Turing preguntó algo revolucionario: ¿cómo sé si una máquina piensa? Propuso el Test de Turing. Si no puedes diferenciar a un humano de una máquina en conversación, ¿la máquina piensa?\n\nHoy ChatGPT pasa pruebas que parecen demostrar consciencia. Pero ¿realmente piensa o predice palabras tan bien que parece pensar? Pregunta sin respuesta.\n\nAquí viene lo importante: ¿importa? Para aplicaciones prácticas, NO. Un diagnóstico médico de IA es útil aunque la IA no sea consciente. Un crédito aprobado por algoritmo es real, consciencia o no.\n\nPero hay problemas éticos URGENTES. Bias: IA entrenada con datos históricos discrimina. Sistema de contratación rechaza mujeres porque datos históricos muestran menos mujeres ingeniero. En LATAM, esto ocurre AHORA.\n\nPrivacidad: tu banco analiza cada movimiento. Desplazamiento: máquinas harán trabajos rutinarios. Reemplazarán empleados en call centers de México, Brasil, Colombia.\n\nLa pregunta real no es 'piensa la máquina.' Es: ¿usaremos IA responsablemente? ¿Quién decide eso? ¿Gobiernos, empresas, ciudadanos? Esta es la verdadera batalla.",
+      "character_count": 773,
+      "estimated_duration_minutes": 4,
+      "tags": ["filosofia", "etica-ia", "consciencia", "bias", "privacidad", "elementsofai"],
+      "thumbnail_prompt": "Philosophy of AI: split screen human vs AI face, thought bubbles with question marks, ethical scale balancing fairness and technology, deep blue contemplative tone"
+    }
+  ]
+}
