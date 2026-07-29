@@ -1,4 +1,4 @@
-# JOVI Academy - Automated YouTube Channel
+# JOVI Academy - Automated Channel
 
 🎬 **Generador automático de videos YouTube**: 2 videos/día en español sobre ciberseguridad e IA.
 
